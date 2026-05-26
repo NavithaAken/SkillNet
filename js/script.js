@@ -42,7 +42,7 @@ $('.friendz-list > li, .chat-users > li').on('click', function() {
 	  });
 
 // delete notifications
-$('.notification-box > ul li > i.del').on("click", function(){
+$('.notification-box > ul li > i.del').on("click", function() {
     $(this).parent().slideUp();
 	return false;
   }); 	
@@ -153,97 +153,6 @@ if ($.isFunction($.fn.loadMoreResults)) {
 		}
 	});	
 }
-	//===== owl carousel  =====//
-	if ($.isFunction($.fn.owlCarousel)) {
-		$('.sponsor-logo').owlCarousel({
-			items: 6,
-			loop: true,
-			margin: 30,
-			autoplay: true,
-			autoplayTimeout: 1500,
-			smartSpeed: 1000,
-			autoplayHoverPause: true,
-			nav: false,
-			dots: false,
-			responsiveClass:true,
-				responsive:{
-					0:{
-						items:3,
-					},
-					600:{
-						items:3,
-
-					},
-					1000:{
-						items:6,
-					}
-				}
-
-		});
-	}
-	
-// slick carousel for detail page
-	if ($.isFunction($.fn.slick)) {
-	$('.slider-for-gold').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		slide: 'li',
-		fade: false,
-		asNavFor: '.slider-nav-gold'
-	});
-	
-	$('.slider-nav-gold').slick({
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		asNavFor: '.slider-for-gold',
-		dots: false,
-		arrows: true,
-		slide: 'li',
-		vertical: true,
-		centerMode: true,
-		centerPadding: '0',
-		focusOnSelect: true,
-		responsive: [
-		{
-			breakpoint: 768,
-			settings: {
-				slidesToShow: 3,
-				slidesToScroll: 1,
-				infinite: true,
-				vertical: false,
-				centerMode: true,
-				dots: false,
-				arrows: false
-			}
-		},
-		{
-			breakpoint: 641,
-			settings: {
-				slidesToShow: 3,
-				slidesToScroll: 1,
-				infinite: true,
-				vertical: true,
-				centerMode: true,
-				dots: false,
-				arrows: false
-			}
-		},
-		{
-			breakpoint: 420,
-			settings: {
-				slidesToShow: 3,
-				slidesToScroll: 1,
-				infinite: true,
-				vertical: false,
-				centerMode: true,
-				dots: false,
-				arrows: false
-			}
-		}	
-		]
-	});
-}
 	
 //---- responsive header
 	
@@ -300,13 +209,6 @@ $(function() {
 		return false;
 	  });
 	
-//----- count down timer		
-	if ($.isFunction($.fn.downCount)) {
-		$('.countdown').downCount({
-			date: '11/12/2018 12:00:00',
-			offset: +10
-		});
-	}
 	
 /** Post a Comment **/
 jQuery(".post-comt-box textarea").on("keydown", function(event) {
